@@ -1,0 +1,9 @@
+az vm list-skus --location eastus --size Standard_N --output table
+
+az vm list-skus --location eastus2 --size Standard_N --output table
+
+az vm list-skus --location westus --size Standard_N --output table 
+
+az vm list-skus --location westus2 --size Standard_N --output table
+
+az vm list-skus --location centralus --size Standard_N --output table
