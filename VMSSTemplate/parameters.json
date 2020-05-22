@@ -6,16 +6,16 @@
             "value": "eastus2"
         },
         "virtualMachineScaleSetName": {
-            "value": "FoldingAtHomeSS"
+            "value": "FoldingAtHomeVMSS"
         },
         "virtualMachineScaleSetRG": {
             "value": "FoldingAtHomeRG"
         },
         "singlePlacementGroup": {
-            "value": "true"
+            "value": "false"
         },
         "instanceSize": {
-            "value": "Standard_NV6"
+            "value": "Standard_NV12s_v3"
         },
         "instanceCount": {
             "value": "3"
@@ -33,7 +33,7 @@
             "value": "/subscriptions/cf2deb86-affb-4ba9-8848-ec9428335fa2/resourceGroups/cczTest/providers/Microsoft.Network/virtualNetworks/cczTest-vnet/subnets/default"
         },
         "osDiskType": {
-            "value": "StandardSSD_LRS"
+            "value": "Standard_LRS"
         },
         "addressPrefixes": {
             "value": [
@@ -56,6 +56,15 @@
         "virtualNetworkName": {
             "value": "FoldingAtHomeRG-vnet"
         },
+        "networkSecurityGroups": {
+            "value": [
+                {
+                    "name": "basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "rules": []
+                }
+            ]
+        },
         "networkInterfaceConfigurations": {
             "value": [
                 {
@@ -67,14 +76,14 @@
                     "applicationSecurityGroups": [],
                     "loadBalancerInboundNatPools": [],
                     "enableAcceleratedNetworking": false,
-                    "nsgName": "",
-                    "nsgId": "",
+                    "nsgName": "basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "nsgId": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/basicNsgFoldingAtHomeRG-vnet-nic01",
                     "pipName": ""
                 }
             ]
         },
         "vmName": {
-            "value": "FoldingAtHomeSS"
+            "value": "FoldingAtHomeVMSS"
         },
         "scaleInPolicy": {
             "value": {
@@ -84,7 +93,7 @@
             }
         },
         "diagnosticStorageAccount": {
-            "value": "foldingathomergdiag204"
+            "value": "foldingathomergdiag166"
         },
         "diagnosticsStorageAccountKind": {
             "value": "Storage"

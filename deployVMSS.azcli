@@ -1,6 +1,6 @@
 az vm list-skus --location eastus --size Standard_N --output table
 
-az vm list-skus --location eastus2 --size Standard_N --output table
+az vm list-skus --location eastus2 --size Standard_NV12s_v3 --output table
 
 az vm list-skus --location westus --size Standard_N --output table 
 
@@ -9,3 +9,15 @@ az vm list-skus --location westus2 --size Standard_N --output table
 az vm list-skus --location centralus --size Standard_N --output table
 
 az vm list-skus --location eastus2 --size Standard_NV6 --output table
+
+# az deployment group create \
+#     --resource-group FoldingAtHomeRG \
+#     --name folding_at_home \
+#     --template-file template.json  \
+#     --parameters @params.json \
+#     --parameters https://mysite/params.json 
+
+az deployment group validate `
+    --resource-group FoldingAtHomeRG `
+    --template-file template.json `
+    --parameters parameters.json

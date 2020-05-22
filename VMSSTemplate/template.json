@@ -47,6 +47,9 @@
         "virtualNetworkName": {
             "type": "string"
         },
+        "networkSecurityGroups": {
+            "type": "array"
+        },
         "networkInterfaceConfigurations": {
             "type": "array"
         },
@@ -102,6 +105,22 @@
             }
         },
         {
+            "name": "[parameters('networkSecurityGroups')[copyIndex()].name]",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "2019-02-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "securityRules": "[parameters('networkSecurityGroups')[copyIndex()].rules]"
+            },
+            "copy": {
+                "name": "networkSecurityGroups",
+                "count": "[length(parameters('networkSecurityGroups'))]"
+            },
+            "tags": {
+                "application": "folding@home"
+            }
+        },
+        {
             "name": "[parameters('diagnosticStorageAccount')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
@@ -122,6 +141,7 @@
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
+                "networkSecurityGroups",
                 "[concat('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
                 "[concat('Microsoft.Storage/storageAccounts/', parameters('diagnosticStorageAccount'))]"
             ],
