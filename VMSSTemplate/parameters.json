@@ -1,0 +1,111 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "virtualMachineScaleSetName": {
+            "value": "FoldingAtHomeSS"
+        },
+        "virtualMachineScaleSetRG": {
+            "value": "FoldingAtHomeRG"
+        },
+        "singlePlacementGroup": {
+            "value": "true"
+        },
+        "instanceSize": {
+            "value": "Standard_NV6"
+        },
+        "instanceCount": {
+            "value": "3"
+        },
+        "upgradeMode": {
+            "value": "Manual"
+        },
+        "priority": {
+            "value": "Spot"
+        },
+        "enableAcceleratedNetworking": {
+            "value": "false"
+        },
+        "subnetId": {
+            "value": "/subscriptions/cf2deb86-affb-4ba9-8848-ec9428335fa2/resourceGroups/cczTest/providers/Microsoft.Network/virtualNetworks/cczTest-vnet/subnets/default"
+        },
+        "osDiskType": {
+            "value": "StandardSSD_LRS"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.1.0.0/24"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.1.0.0/24"
+                    }
+                }
+            ]
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet"
+        },
+        "virtualNetworkName": {
+            "value": "FoldingAtHomeRG-vnet"
+        },
+        "networkInterfaceConfigurations": {
+            "value": [
+                {
+                    "name": "FoldingAtHomeRG-vnet-nic01",
+                    "primary": true,
+                    "subnetId": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default",
+                    "applicationGatewayBackendAddressPools": [],
+                    "loadBalancerBackendAddressPools": [],
+                    "applicationSecurityGroups": [],
+                    "loadBalancerInboundNatPools": [],
+                    "enableAcceleratedNetworking": false,
+                    "nsgName": "",
+                    "nsgId": "",
+                    "pipName": ""
+                }
+            ]
+        },
+        "vmName": {
+            "value": "FoldingAtHomeSS"
+        },
+        "scaleInPolicy": {
+            "value": {
+                "rules": [
+                    "Default"
+                ]
+            }
+        },
+        "diagnosticStorageAccount": {
+            "value": "foldingathomergdiag204"
+        },
+        "diagnosticsStorageAccountKind": {
+            "value": "Storage"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "upgradePolicy": {
+            "value": "Manual"
+        },
+        "adminUsername": {
+            "value": "foldingadmin"
+        },
+        "adminPublicKey": {
+            "value": null
+        },
+        "evictionPolicy": {
+            "value": "Deallocate"
+        },
+        "platformFaultDomainCount": {
+            "value": "1"
+        }
+    }
+}

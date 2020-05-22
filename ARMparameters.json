@@ -3,25 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "southcentralus"
+            "value": "eastus"
         },
         "networkInterfaceName": {
-            "value": "worker01"
+            "value": "foldingWorkerNIC01"
         },
         "networkSecurityGroupId": {
-            "value": "/subscriptions/d1b253d6-f707-4849-a382-bd5b5cbce2fe/resourceGroups/folding/providers/Microsoft.Network/networkSecurityGroups/foldingNSGSC"
+            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/folding/providers/Microsoft.Network/networkSecurityGroups/foldingNSG"
         },
         "subnetName": {
             "value": "default"
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/d1b253d6-f707-4849-a382-bd5b5cbce2fe/resourceGroups/folding/providers/Microsoft.Network/virtualNetworks/foldingVNetSC"
+            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/folding/providers/Microsoft.Network/virtualNetworks/foldingVNetSC"
         },
         "virtualMachineName": {
-            "value": "worker01"
+            "value": "foldingWorker01"
         },
         "virtualMachineRG": {
-            "value": "folding"
+            "value": "FoldingAtHomeRG"
         },
         "osDiskType": {
             "value": "Standard_LRS"
