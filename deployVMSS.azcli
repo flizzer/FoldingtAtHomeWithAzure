@@ -10,6 +10,8 @@ az vm list-skus --location centralus --size Standard_N --output table
 
 az vm list-skus --location eastus2 --size Standard_NV6 --output table
 
+az keyvault update  --name bhd-key-vault --enabled-for-template-deployment true
+
 # az deployment group create \
 #     --resource-group FoldingAtHomeRG \
 #     --name folding_at_home \
