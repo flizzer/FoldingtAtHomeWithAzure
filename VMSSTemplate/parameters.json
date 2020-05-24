@@ -108,7 +108,12 @@
             "value": "foldingadmin"
         },
         "adminPublicKey": {
-            "value": null
+            "reference": {
+                "keyVault": {
+                "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.KeyVault/vaults/bhd-key-vault"
+                },
+                "secretName": "ssh-public"
+              }
         },
         "evictionPolicy": {
             "value": "Deallocate"
