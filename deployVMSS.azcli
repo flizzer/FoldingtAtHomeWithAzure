@@ -12,6 +12,9 @@ az vm list-skus --location eastus2 --size Standard_NV6 --output table
 
 az keyvault update  --name bhd-key-vault --enabled-for-template-deployment true
 
+az keyvault secret set --vault-name bhd-key-vault --name "ssh-public" `
+    --value ""
+
 # az deployment group create \
 #     --resource-group FoldingAtHomeRG \
 #     --name folding_at_home \
