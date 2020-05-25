@@ -8,9 +8,11 @@ az vm list-skus --location westus2 --size Standard_N --output table
 
 az vm list-skus --location centralus --size Standard_N --output table
 
-az vm list-skus --location eastus2 --size Standard_NV6 --output table
+az vm list-skus --location eastus2 --size Standard_N --output table
 
-az vm list-skus --location southcentral --size Standard_N --output table
+az vm list-skus --location eastus2 --output table
+
+az vm list-skus --location southcentralus --output table
 
 az keyvault update  --name bhd-key-vault --enabled-for-template-deployment true
 
