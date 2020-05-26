@@ -18,13 +18,13 @@
             "value": "Standard_NV12s_v3"
         },
         "instanceCount": {
-            "value": "3"
+            "value": "1"
         },
         "upgradeMode": {
             "value": "Manual"
         },
         "priority": {
-            "value": "Spot"
+            "value": "Regular"
         },
         "enableAcceleratedNetworking": {
             "value": "false"
