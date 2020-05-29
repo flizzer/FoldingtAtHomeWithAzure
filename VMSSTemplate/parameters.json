@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus2"
+            "value": "southcentralus"
         },
         "virtualMachineScaleSetName": {
             "value": "FoldingAtHomeVMSS"
@@ -15,10 +15,10 @@
             "value": "false"
         },
         "instanceSize": {
-            "value": "Standard_NV12s_v3"
+            "value": "Standard_NV6"
         },
         "instanceCount": {
-            "value": "1"
+            "value": "2"
         },
         "upgradeMode": {
             "value": "Manual"
@@ -116,7 +116,7 @@
               }
         },
         "evictionPolicy": {
-            "value": "Deallocate"
+            "value": ""
         },
         "platformFaultDomainCount": {
             "value": "1"

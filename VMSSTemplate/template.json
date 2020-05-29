@@ -227,9 +227,6 @@
                             }
                         }
                     },
-                    "billingProfile": {
-                        "maxPrice": -1
-                    },
                     "evictionPolicy": "[parameters('evictionPolicy')]"
                 },
                 "scaleInPolicy": "[parameters('scaleInPolicy')]",
