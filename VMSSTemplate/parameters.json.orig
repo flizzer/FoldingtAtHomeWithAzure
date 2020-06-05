@@ -45,10 +45,7 @@
                 {
                     "name": "default",
                     "properties": {
-                        "addressPrefix": "10.1.0.0/24",
-                        "networkSecurityGroup": {
-                            "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg"
-                        }
+                        "addressPrefix": "10.1.0.0/24"
                     }
                 }
             ]
@@ -62,44 +59,9 @@
         "networkSecurityGroups": {
             "value": [
                 {
-                    "name": "FoldingAtHomeVMSSAccess-nsg",
-                    "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg",
-                    "rules": [
-                        {
-                            "name": "SSH",
-                            "properties": {
-                                "protocol": "TCP",
-                                "sourcePortRange": "*",
-                                "destinationPortRange": "22",
-                                "sourceAddressPrefix": "<insert your public source IP here>",
-                                "destinationAddressPrefix": "*",
-                                "access": "Allow",
-                                "priority": 300,
-                                "direction": "Inbound",
-                                "sourcePortRanges": [],
-                                "destinationPortRanges": [],
-                                "sourceAddressPrefixes": [],
-                                "destinationAddressPrefixes": []
-                            }
-                        },
-                        {
-                            "name": "RDP",
-                            "properties": {
-                                "protocol": "*",
-                                "sourcePortRange": "*",
-                                "destinationPortRange": "3389",
-                                "sourceAddressPrefix": "<insert your public source IP here>", 
-                                "destinationAddressPrefix": "*",
-                                "access": "Allow",
-                                "priority": 310,
-                                "direction": "Inbound",
-                                "sourcePortRanges": [],
-                                "destinationPortRanges": [],
-                                "sourceAddressPrefixes": [],
-                                "destinationAddressPrefixes": []
-                            }
-                        }
-                    ]
+                    "name": "basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "rules": []
                 }
             ]
         },
@@ -114,9 +76,9 @@
                     "applicationSecurityGroups": [],
                     "loadBalancerInboundNatPools": [],
                     "enableAcceleratedNetworking": false,
-                    "nsgName": "",
-                    "nsgId": "",
-                    "pipName": "FoldingAtHomeInstance-pip"
+                    "nsgName": "basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "nsgId": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/basicNsgFoldingAtHomeRG-vnet-nic01",
+                    "pipName": ""
                 }
             ]
         },
