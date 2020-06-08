@@ -30,7 +30,7 @@
             "value": "false"
         },
         "subnetId": {
-            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default"
+            "value": "/subscriptions/<insert your subscription id here>/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default"
         },
         "osDiskType": {
             "value": "Standard_LRS"
@@ -47,14 +47,14 @@
                     "properties": {
                         "addressPrefix": "10.1.0.0/24",
                         "networkSecurityGroup": {
-                            "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg"
+                            "id": "/subscriptions/<insert your subscription id here>/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg"
                         }
                     }
                 }
             ]
         },
         "virtualNetworkId": {
-            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet"
+            "value": "/subscriptions/<insert your subscription id here>/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet"
         },
         "virtualNetworkName": {
             "value": "FoldingAtHomeRG-vnet"
@@ -63,7 +63,7 @@
             "value": [
                 {
                     "name": "FoldingAtHomeVMSSAccess-nsg",
-                    "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg",
+                    "id": "/subscriptions/<insert your subscription id here>/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/networkSecurityGroups/FoldingAtHomeVMSSAccess-nsg",
                     "rules": [
                         {
                             "name": "SSH",
@@ -108,7 +108,7 @@
                 {
                     "name": "FoldingAtHomeRG-vnet-nic01",
                     "primary": true,
-                    "subnetId": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default",
+                    "subnetId": "/subscriptions/<insert your subscription id here>/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default",
                     "applicationGatewayBackendAddressPools": [],
                     "loadBalancerBackendAddressPools": [],
                     "applicationSecurityGroups": [],
@@ -148,7 +148,7 @@
         "adminPublicKey": {
             "reference": {
                 "keyVault": {
-                "id": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/bhd-key-vault-RG/providers/Microsoft.KeyVault/vaults/bhd-key-vault"
+                "id": "/subscriptions/<insert your subscription id here>/resourceGroups/bhd-key-vault-RG/providers/Microsoft.KeyVault/vaults/bhd-key-vault"
                 },
                 "secretName": "ssh-public"
               }
