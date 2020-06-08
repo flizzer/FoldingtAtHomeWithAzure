@@ -30,7 +30,7 @@
             "value": "false"
         },
         "subnetId": {
-            "value": "/subscriptions/cf2deb86-affb-4ba9-8848-ec9428335fa2/resourceGroups/cczTest/providers/Microsoft.Network/virtualNetworks/cczTest-vnet/subnets/default"
+            "value": "/subscriptions/1737ff1f-4b0d-4d6e-82c2-3c2ee3cb2f1c/resourceGroups/FoldingAtHomeRG/providers/Microsoft.Network/virtualNetworks/FoldingAtHomeRG-vnet/subnets/default"
         },
         "osDiskType": {
             "value": "Standard_LRS"
