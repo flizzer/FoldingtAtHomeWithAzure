@@ -1,3 +1,5 @@
+az login
+
 az vm list-skus --location eastus --size Standard_N --output table
 
 az vm list-skus --location eastus --size Standard_NV12s_v3 --output table
